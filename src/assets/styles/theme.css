@@ -1,0 +1,118 @@
+@theme {
+	--ui-margin: 1.25rem; /* 20px */
+
+	--ui-width-xl: 1600;
+	--ui-width-lg: 1440;
+	--ui-width-md: 1248;
+	--ui-width-sm: 800;
+	--ui-width-xs: 600;
+
+	--color-*: initial;
+
+	--black: var(--neutral-900);
+	--white: var(--neutral-50);
+
+	--primary: var(--primary-500);
+	--primary-50: #fdf7ef;
+	--primary-100: #fbeed9;
+	--primary-200: #f5d9b3;
+	--primary-300: #eebe83;
+	--primary-400: #e8a05a;
+	--primary-500: #e17f2e;
+	--primary-600: #d26724;
+	--primary-700: #af4f1f;
+	--primary-800: #8c4020;
+	--primary-900: #71361d;
+
+	--secondary: var(--secondary-500);
+	--secondary-50: #eff3fe;
+	--secondary-100: #e1e8fe;
+	--secondary-200: #c9d3fc;
+	--secondary-300: #a8b6f9;
+	--secondary-400: #8590f4;
+	--secondary-500: #1a1713;
+	--secondary-600: #534be0;
+	--secondary-700: #534ac9;
+	--secondary-800: #3a349f;
+	--secondary-900: #33317e;
+
+	--neutral: var(--neutral-500);
+	--neutral-50: #fafafa;
+	--neutral-100: #f4f5f5;
+	--neutral-200: #e4e7e6;
+	--neutral-300: #d4d8d7;
+	--neutral-400: #a2a9a7;
+	--neutral-500: #727977;
+	--neutral-600: #535a58;
+	--neutral-700: #404543;
+	--neutral-800: #2f3231;
+	--neutral-900: #181b1a;
+
+	--success-500: #44b100;
+
+	--warning-500: #ee1419;
+
+	--error-500: #c6b601;
+}
+
+@theme inline {
+	--color-background-primary: var(--primary);
+	--color-background-white: var(--white);
+	--color-background-black: var(--black);
+
+	--color-black: var(--black);
+	--color-white: var(--white);
+	--color-primary: var(--primary);
+
+	--color-background-disabled: var(--neutral-100);
+	--color-disabled: var(--neutral-400);
+
+	--color-primary-50: var(--primary-50);
+	--color-primary-100: var(--primary-100);
+	--color-primary-200: var(--primary-200);
+	--color-primary-300: var(--primary-300);
+	--color-primary-400: var(--primary-400);
+	--color-primary-500: var(--primary-500);
+	--color-primary-600: var(--primary-600);
+	--color-primary-700: var(--primary-700);
+	--color-primary-800: var(--primary-800);
+	--color-primary-900: var(--primary-900);
+
+	--color-seconary-50: var(--seconary-50);
+	--color-seconary-100: var(--seconary-100);
+	--color-seconary-200: var(--seconary-200);
+	--color-seconary-300: var(--seconary-300);
+	--color-seconary-400: var(--seconary-400);
+	--color-seconary-500: var(--seconary-500);
+	--color-seconary-600: var(--seconary-600);
+	--color-seconary-700: var(--seconary-700);
+	--color-seconary-800: var(--seconary-800);
+	--color-seconary-900: var(--seconary-900);
+
+	--color-neutral-50: var(--neutral-50);
+	--color-neutral-100: var(--neutral-100);
+	--color-neutral-200: var(--neutral-200);
+	--color-neutral-300: var(--neutral-300);
+	--color-neutral-400: var(--neutral-400);
+	--color-neutral-500: var(--neutral-500);
+	--color-neutral-600: var(--neutral-600);
+	--color-neutral-700: var(--neutral-700);
+	--color-neutral-800: var(--neutral-800);
+	--color-neutral-900: var(--neutral-900);
+
+	--color-warning: var(--warning-500);
+	--color-error: var(--error-500);
+	--color-success: var(--success-500);
+}
+
+@utility ui-container {
+	--ui-max-width: calc(var(--ui-width-md) * 1px + 2 * var(--ui-margin));
+	@apply mx-auto px-[--ui-margin] max-w-[--ui-max-width];
+}
+
+@utility ui-container-* {
+	--ui-max-width: calc(
+		--value(--ui-width-*, integer) * 1px + 2 * var(--ui-margin)
+	);
+	@apply mx-auto px-[--ui-margin] max-w-[--ui-max-width];
+}
